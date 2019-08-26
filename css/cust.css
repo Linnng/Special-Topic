@@ -1,0 +1,211 @@
+*{
+    outline: red 1px solid;
+}
+body{
+    background-image: url('../img/same_bg.png');
+}
+.pineapple_img, .redbean_img, .almond_img, .egg_img, .ham_img, .springOnion_img{
+    width: 100%;
+}
+.clearfix{
+    clear: both;
+}
+
+.cust_title_box{
+    background-image: url('../img/title.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    height: 270px;
+}
+.cust_title{
+    text-align: center;
+    padding-top: 145px;
+}
+
+
+/* favor------------------------------ */
+.cust_favor_list, .cust_favor_type{
+    float: left;
+}
+.cust_favor_list{
+    width: 30%;
+}
+.cust_favor_type{
+    width: 70%;
+}
+
+.favor_jp, .favor_west, .favor_china{
+    width: 33.33%;
+    float: left;
+    position: relative;
+}
+.favor_box{
+    /* Let the favorBox on the right. */
+    float: right;
+    margin: 20px 0;
+}
+.pie_img, .favor_style, .favor_title{
+    position: absolute;
+}
+.pie_img{
+    top: 170px;
+    right: 30px;
+}
+.favor_style{
+    font-size: 50px;
+    top: 60px;
+    right: 40px;
+}
+.favor_title{
+    font-size: 50px;
+    writing-mode: vertical-lr;
+    bottom: 120px;
+    right: 125px;
+}
+
+
+
+/* ingredient------------------------- */
+.cust_aside, .scroll_box{
+    float: right;
+}
+
+
+/* **********right ingredient manu********** */
+.cust_aside{
+    width: 280px;
+}
+/* ingredient box */
+.cust_ingred_box{
+    width: 280px;
+    background-image: url('../img/asideBox.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    position: relative;
+    height: 570px;
+}
+/* ingredient elements */
+.pineapple_box, .redbean_box, .almond_box, .egg_box, .ham_box, .springOnion_box{
+    width: 120px;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+.level{
+    padding: 10px;
+    font-size: 25px;
+}
+.sweet, .health, .salty{
+    margin: 20px 0;
+}
+.barDefault{    /* taste bar box */
+    display: inline-block;
+    width: 200px;
+    height: 30px;
+    padding: 4px;
+    border-radius: 15px;
+    background-color: #fff;
+}
+.sweetBar, .healthBar, .saltyBar{   /* taste bar default */
+    height: 22px;
+    min-width: 22px;
+    border-radius: 13px;
+}
+.sweetBar{
+    width: 100px;
+    background-color: orchid;
+}
+.healthBar{
+    width: 70px;
+    background-color: lightseagreen;
+}
+.saltyBar{
+    width: 150px;
+    background-color: sienna;
+}
+
+/* **********left scroll box********** */
+.scroll_box{
+    width: 920px;
+}
+.cust_list_item{
+    width: 250px;
+    height: 560px;
+    background-image: url('../img/list.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    position: relative;
+}
+.cust_price{
+    width: 250px;
+    height: 300px;
+    margin: 10px 0;
+    background-image: url('../img/price.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    position: relative;
+}
+
+/* decoration------------------------- */
+
+
+
+
+
+/* message---------------------------- */
+.card_message{
+    background-image: url('../img/message.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    position: relative;
+    height: 800px;
+}
+form{
+    display: block;
+    width: 950px;
+    position: absolute;
+    top: 330px;
+    left: 50%;
+    margin-left: -475px;
+}
+.msgTitle{
+    width: 400px;
+    height: 30px;
+    border: 3px black solid;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 0 5px;
+}
+.msgContent{
+    max-width: 950px;
+    min-width: 950px;
+    max-height: 300px;
+    min-height: 300px;
+    border: 3px black solid;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+
+.btn{
+    position: relative;
+}
+.submitBtn{
+    margin: auto;
+}
+.submitContent{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: 40px;
+    display: block;
+    margin: auto;
+}
