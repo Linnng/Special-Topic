@@ -10,6 +10,27 @@ body{
 .clearfix{
     clear: both;
 }
+/* Buttons */
+.btn_box{
+    text-align: center;
+}
+.btn{
+    width: 250px;
+    display: inline-block;
+    cursor: pointer;
+}
+.btn > img{
+    width: 100%;
+}
+/* .submitContent{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: 40px;
+    display: block;
+    margin: auto;
+} */
 
 .cust_title_box{
     background-image: url('../img/title.png');
@@ -24,15 +45,15 @@ body{
 }
 
 
-/* favor------------------------------ */
-.cust_favor_list, .cust_favor_type{
-    float: left;
-}
+/* ----------------------favor---------------------- */
+/* ------------------------------------------------- */
 .cust_favor_list{
     width: 30%;
+    float: left;
 }
 .cust_favor_type{
     width: 70%;
+    float: left;
 }
 
 .favor_jp, .favor_west, .favor_china{
@@ -41,23 +62,22 @@ body{
     position: relative;
 }
 .favor_box{
-    /* Let the favorBox on the right. */
-    float: right;
+    float: right;   /* 讓基底的籤條靠右切齊 */
     margin: 20px 0;
 }
 .pie_img, .favor_style, .favor_title{
     position: absolute;
 }
-.pie_img{
+.pie_img{       /* 派圖片 */
     top: 170px;
     right: 30px;
 }
-.favor_style{
+.favor_style{   /* 風格文字--西洋風 */
     font-size: 50px;
     top: 60px;
     right: 40px;
 }
-.favor_title{
+.favor_title{   /* 基底名字--南瓜派 */
     font-size: 50px;
     writing-mode: vertical-lr;
     bottom: 120px;
@@ -66,7 +86,8 @@ body{
 
 
 
-/* ingredient------------------------- */
+/* -------------------------ingredient------------------------- */
+/* ------------------------------------------------------------ */
 .cust_aside, .scroll_box{
     float: right;
 }
@@ -132,6 +153,14 @@ body{
 .scroll_box{
     width: 920px;
 }
+.cust_listBox{
+    width: 250px;
+    float: left;
+}
+.cust_mainbox{
+    width: 670px;
+    float: left;
+}
 .cust_list_item{
     width: 250px;
     height: 560px;
@@ -152,13 +181,22 @@ body{
     position: relative;
 }
 
-/* decoration------------------------- */
 
 
 
 
 
-/* message---------------------------- */
+
+/* -------------------------decoration------------------------- */
+/* ------------------------------------------------------------ */
+
+
+
+
+
+
+/* ----------------------------message---------------------------- */
+/* --------------------------------------------------------------- */
 .card_message{
     background-image: url('../img/message.png');
     background-repeat: no-repeat;
@@ -193,19 +231,3 @@ form{
     padding: 5px;
 }
 
-
-.btn{
-    position: relative;
-}
-.submitBtn{
-    margin: auto;
-}
-.submitContent{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    font-size: 40px;
-    display: block;
-    margin: auto;
-}
