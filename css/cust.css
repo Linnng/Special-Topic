@@ -1,4 +1,7 @@
 *{
+    /* outline: red 1px solid; */
+}
+section, .container, .mascot_box, .woodtable, .mainpie_box, .mainpie_box > img, .btn_box, .btn{
     outline: red 1px solid;
 }
 body{
@@ -47,15 +50,35 @@ body{
 
 /* ----------------------favor---------------------- */
 /* ------------------------------------------------- */
+.cust_slogan{
+    padding: 50px 0;
+    font-size: 28px;
+    display: block;
+    text-align: center;
+}
 .cust_favor_list{
-    width: 30%;
+    width: 250px;
     float: left;
+    margin-top: -60px;
 }
 .cust_favor_type{
-    width: 70%;
+    width: 950px;
     float: left;
 }
-
+.first_step_box{
+    width: 100%;
+    height: 290px;
+    background-image: url('../img/pumpkin.png');
+    transform: rotate(-10deg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+.first_step{
+    width: 100%;
+    transform: translateX(0) translateY(150px) rotate(10deg);
+    text-align: center;
+}
 .favor_jp, .favor_west, .favor_china{
     width: 33.33%;
     float: left;
@@ -64,6 +87,7 @@ body{
 .favor_box{
     float: right;   /* 讓基底的籤條靠右切齊 */
     margin: 20px 0;
+    cursor: pointer;
 }
 .pie_img, .favor_style, .favor_title{
     position: absolute;
@@ -98,21 +122,38 @@ body{
     width: 280px;
 }
 /* ingredient box */
-.cust_ingred_box{
+.cust_ingred_bg{    /* item_bgc */
     width: 280px;
+    height: 700px;
+    /* 
+    height: 0;
+    padding-bottom: 100%; 
+    */
     background-image: url('../img/asideBox.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
     position: relative;
-    height: 570px;
+}
+.cust_ingred_box{   /* item_group */
+    position: absolute;
+    width: 70%;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 /* ingredient elements */
-.pineapple_box, .redbean_box, .almond_box, .egg_box, .ham_box, .springOnion_box{
+.ingred_item{   /* item_food */
+    width: 45%;
+    /*     
     width: 120px;
     float: left;
     padding: 10px;
-    box-sizing: border-box;
+    box-sizing: border-box; 
+    */
 }
 
 
@@ -121,18 +162,19 @@ body{
     font-size: 25px;
 }
 .sweet, .health, .salty{
-    margin: 20px 0;
+    line-height: 0;
+    margin: 10px 0;
 }
 .barDefault{    /* taste bar box */
     display: inline-block;
     width: 200px;
-    height: 30px;
+    height: 28px;
     padding: 4px;
     border-radius: 15px;
     background-color: #fff;
 }
 .sweetBar, .healthBar, .saltyBar{   /* taste bar default */
-    height: 22px;
+    height: 20px;
     min-width: 22px;
     border-radius: 13px;
 }
@@ -162,7 +204,7 @@ body{
     float: left;
 }
 .cust_list_item{
-    width: 250px;
+    width: 100%;
     height: 560px;
     background-image: url('../img/list.png');
     background-repeat: no-repeat;
@@ -181,6 +223,80 @@ body{
     position: relative;
 }
 
+
+/* Main area for the show */
+.cust_showArea{
+    position: relative;
+}
+.sec_step_box{
+    width: 330px;
+    height: 270px;
+    background-image: url('../img/pumpkin.png');
+    transform: translateX(25px) translateY(30px) rotate(-10deg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+.sec_step{
+    width: 250px;
+    transform: translateX(35px) translateY(150px) rotate(10deg);
+    text-align: center;
+}
+
+@keyframes move{
+    0% {
+        transform: translateX(60%) translateY(-40%) rotate(10deg);
+    }
+    50% {
+        transform: translateX(60%) translateY(-45%) rotate(10deg);
+    }
+    100% {
+        transform: translateX(60%) translateY(-40%) rotate(10deg);
+    }
+}
+/* mascot */
+.mascot_box{
+    width: 30%;
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    transform: translateX(0%) translateY(40%) rotate(10deg);
+    animation: move 2s linear infinite;
+}
+.mascot{
+   
+    height: 100%;
+}
+/* pie */
+.mainpie_box{
+    width: 70%;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    margin-left: -35%;
+}
+.mainpie_box > img{
+    width: 100%;
+}
+/* table */
+.woodtable{
+    /* put the img at the html. */
+    /*
+    width: 100%; 
+    position: absolute;
+    bottom: 0;
+    left: 13%;
+    */
+    
+    width: 100%;
+    height: 200px;
+    background-image: url('../img/wood.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 75%;
+    position: absolute;
+    top: 70%;
+}
 
 
 
