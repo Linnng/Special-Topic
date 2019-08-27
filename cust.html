@@ -7,41 +7,58 @@
     <title>Customized</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/cust.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="forTextarea.js"></script>
 </head>
 <body>
     <header></header>
     <section class="cust_favor">
         <div class="container">
             <span class="cust_slogan">客製一個屬於自己的團購商品吧!</span>
-            <div class="cust_title_box">
-                <h2 class="cust_title">選擇基底</h2>
-            </div>
             <div class="wrap">
-                <div class="cust_favor_list">
+                <div class="cust_listBox">
+                    <img src="img/list.png" alt="" class="list" />
+                    <img src="img/price.png" alt="" />
+                </div>
+                <!-- <div class="cust_favor_list">
                     <div class="first_step_box">
                         <p class="first_step">first step<br> bla bla bla...</p>
                     </div>
                     <div class="cust_list_item"></div>
                     <div class="cust_price"></div>
-                </div>
+                </div> -->
                 <div class="cust_favor_type">
                     <div class="favor_jp">
                         <img src="img/style.png" alt="style" class="favor_box">
                         <img src="img/jp_pie.png" alt="japan pie" class="pie_img">
                         <span class="favor_style">日式風</span>
                         <h3 class="favor_title">抹茶派</h3>
+                        <img src="img/vampire.png" alt="" class="mascot">
+
                     </div>
                     <div class="favor_west">
                         <img src="img/style.png" alt="style" class="favor_box">
                         <img src="img/west_pie.png" alt="western pie" class="pie_img">
                         <span class="favor_style">日式風</span>
                         <h3 class="favor_title">抹茶派</h3>
+                        <img src="img/vampire.png" alt="" class="mascot">
                     </div>
                     <div class="favor_china">
                         <img src="img/style.png" alt="style" class="favor_box">
                         <img src="img/china_pie.png" alt="chinese pie" class="pie_img">
                         <span class="favor_style">日式風</span>
                         <h3 class="favor_title">抹茶派</h3>
+                        <img src="img/vampire.png" alt="" class="mascot">
+                    </div>
+                </div>
+                    <div class="cust_titleshow_step1">
+                        <img src="img/pumpkin.png" alt="" />
+                        <h3 class="cust_scrollboxtitle">step1</h3>
+                    </div>
+                <div class="btn_box">
+                    <div class="btn">
+                        <img src="img/button.png" alt="button">
+                        <span class="btn_text">下一步</span>
                     </div>
                 </div>
             </div>
@@ -50,103 +67,63 @@
 
 
 
-    <section class="cust_ingred">
+
+    
+    <section class="cust_decor">
         <div class="container">
-            <div class="cust_title_box">
-                <h2 class="cust_title">選擇基底</h2>
+            
+            <div class="cust_listBox">
+                <img src="img/list.png" alt="" class="list" />
+                <img src="img/price.png" alt="" />
             </div>
-            <div class="wrap">
-                <div class="cust_aside">
-                    <div class="cust_ingred_bg">
-                        <div class="cust_ingred_box">
-                            <div class="ingred_item">
-                                <img src="img/pineapple.png" alt="Pineapple" class="pineapple_img">
-                                <p class="pineappke_title">Haha</p>
-                            </div>
-                            <div class="ingred_item">
-                                <img src="img/pineapple.png" alt="Red Bean" class="redbean_img">
-                                <p class="redbean_title">haha</p>
-                            </div>
-
-                            <div class="ingred_item">
-                                <img src="img/pineapple.png" alt="Almond" class="almond_img">
-                                <p class="almond_title">haha</p>
-                            </div>
-                            <div class="ingred_item">
-                                <img src="img/pineapple.png" alt="Egg" class="egg_img">
-                                <p class="egg_title">haha</p>
-                            </div>
-                        
-                            <div class="ingred_item">
-                                <img src="img/pineapple.png" alt="Ham" class="ham_img">
-                                <p class="ham_title">haha</p>
-                            </div>
-                            <div class="ingred_item">
-                                <img src="img/pineapple.png" alt="Spring Onion" class="springOnion_img">
-                                <p class="springOnion">haha</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="level">
-                        <div class="sweet">
-                            甜蜜
-                            <div class="barDefault">
-                                <div class="sweetBar"></div>
-                            </div>
-                        </div>
-                        <div class="health">
-                            養生
-                            <div class="barDefault">
-                                <div class="healthBar"></div>
-                            </div>
-                        </div>
-                        <div class="salty">
-                            鹹派
-                            <div class="barDefault">
-                                <div class="saltyBar"></div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="cust_scrollbox">
+                <div class="cust_titleshow">
+                    <img src="img/pumpkin.png" alt="" />
+                    <h3 class="cust_scrollboxtitle">step2</h3>
                 </div>
-                <div class="scroll_box">
-                    <div class="cust_listBox">
-                        <div class="cust_list_item"></div>
-                        <div class="cust_price"></div>
+                <div class="cust_pieshow">
+                    <img class="prople" src="img/vampire.png" alt="" />
+                    <img class="pie" src="img/west_pie.png" alt="" />
+                    <img class="wood" src="img/wood.png" alt="" />
+                </div>
+            </div>
+            <div class="cust_aside">
+                <img src="img/asideBox.png" alt="" />
+                <div class="cust_ingred_box">
+                    <div class="cust_item">
+                    <img src="img/pineapple.png" alt="" />
                     </div>
-                    <div class="cust_mainbox">
-
-                        <div class="sec_step_box">
-                            <p class="sec_step">second step, bla bla bla...</p>
-                        </div>
-                        <!-- Pie and mascot area -->
-                        <div class="cust_showArea">
-                            <div class="mascot_box">
-                                <img src="img/vampire.png" alt="Mascot" class="mascot">
-                            </div>
-
-                            <div class="woodtable">
-                                <!-- <img src="img/west_pie.png" alt="Table"> -->
-                            </div>
-                            <div class="mainpie_box">
-                                <img src="img/west_pie.png" alt="Pie">
-                            </div>
-
-                        </div>
-
-
-                        <div class="btn_box">
-                            <div class="btn">
-                                <img src="img/button.png" alt="Last Step">
-                                上一步
-                            </div>
-                            <div class="btn">
-                                <img src="img/button.png" alt="Next Step">
-                                下一步
-                            </div>
-                        </div>
+                    <div class="cust_item">
+                    <img src="img/pineapple.png" alt="" />
+                    </div>
+                    <div class="cust_item">
+                    <img src="img/pineapple.png" alt="" />
+                    </div>
+                    <div class="cust_item">
+                    <img src="img/pineapple.png" alt="" />
+                    </div>
+                    <div class="cust_item">
+                    <img src="img/pineapple.png" alt="" />
+                    </div>
+                    <div class="cust_item">
+                    <img src="img/pineapple.png" alt="" />
                     </div>
                 </div>
             </div>
+
+
+            <div class="btn_box">
+                <div class="btn">
+                    <img src="img/button.png" alt="button" class="lastStep">
+                    <span class="btn_text">上一步</span>
+                </div>
+                <div class="btn">
+                    <img src="img/button.png" alt="button" class="nextStep">
+                    <span class="btn_text">下一步</span>
+                </div>
+            </div>
+
+
         </div>
     </section>
 
@@ -155,37 +132,59 @@
 
     <section class="cust_decor">
         <div class="container">
-            <div class="cust_title_box">
-                <h2 class="cust_title">選擇基底</h2>
+            
+            <div class="cust_listBox">
+                <img src="img/list.png" alt="" class="list" />
+                <img src="img/price.png" alt="" />
             </div>
-            <div class="wrap">
-                <div class="cust_aside">
-                    <div class="cust_ingred_bg">
-                        <div class="cust_ingred_box"></div>
+            <div class="cust_scrollbox">
+                <div class="cust_titleshow">
+                    <img src="img/pumpkin.png" alt="" />
+                    <h3 class="cust_scrollboxtitle">step3</h3>
+                </div>
+                <div class="cust_pieshow">
+                    <img class="prople" src="img/vampire.png" alt="" />
+                    <img class="pie" src="img/west_pie.png" alt="" />
+                    <img class="wood" src="img/wood.png" alt="" />
+                </div>
+            </div>
+            <div class="cust_aside">
+                <img src="img/asideBox.png" alt="" />
+                <div class="cust_ingred_box">
+                    <div class="cust_item">
+                    <img src="img/pineapple.png" alt="" />
                     </div>
-                    <div class="level">
-                        <div class="sweet">
-                            甜蜜
-                            <div class="barDefault">
-                                <div class="sweetBar"></div>
-                            </div>
-                        </div>
-                        <div class="health">
-                            養生
-                            <div class="barDefault">
-                                <div class="healthBar"></div>
-                            </div>
-                        </div>
-                        <div class="salty">
-                            鹹派
-                            <div class="barDefault">
-                                <div class="saltyBar"></div>
-                            </div>
-                        </div>
+                    <div class="cust_item">
+                    <img src="img/pineapple.png" alt="" />
+                    </div>
+                    <div class="cust_item">
+                    <img src="img/pineapple.png" alt="" />
+                    </div>
+                    <div class="cust_item">
+                    <img src="img/pineapple.png" alt="" />
+                    </div>
+                    <div class="cust_item">
+                    <img src="img/pineapple.png" alt="" />
+                    </div>
+                    <div class="cust_item">
+                    <img src="img/pineapple.png" alt="" />
                     </div>
                 </div>
-                <div class="scroll_box"></div>
             </div>
+
+
+            <div class="btn_box">
+                <div class="btn">
+                    <img src="img/button.png" alt="button" class="lastStep">
+                    <span class="btn_text">上一步</span>
+                </div>
+                <div class="btn">
+                    <img src="img/button.png" alt="button" class="nextStep">
+                    <span class="btn_text">下一步</span>
+                </div>
+            </div>
+
+
         </div>
     </section>
 
@@ -201,12 +200,14 @@
                 <div class="card_message">
                     <form action="xxx.php">
                         取個名字吧 : <input type="text" name="msgTitle" class="msgTitle" placeholder="大眼怪怪..."><br>
-                        <textarea name="msgContent" class="msgContent" cols rows maxbytes="500" maxlength="500" placeholder="增加文字說明，讓使用者投你一票，讓你的客製派衝上團購標準。"></textarea>
+                        <textarea name="msgContent" class="msgContent" cols rows="100" maxbytes="500" maxlength="500" placeholder="增加文字說明，讓使用者投你一票，讓你的客製派衝上團購標準。"></textarea>
                     </form>
                 </div>
-                <div class="btn">
-                    <img src="img/button.png" alt="button" class="submitBtn">
-                    <span class="submitContent">客製完成</span>
+                <div class="btn_box">
+                    <div class="btn">
+                        <img src="img/button.png" alt="button" class="submitBtn">
+                        <span id="submitContent" class="btn_text">客製完成</span>
+                    </div>
                 </div>
             </div>
         </div>
