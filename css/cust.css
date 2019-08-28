@@ -1,15 +1,10 @@
-*{
-    outline: red 1px solid;
-}
+
 body{
     background-image: url('../img/same_bg.png');
+    background-repeat: repeat-y;
+    background-position: center;
 }
-.pineapple_img, .redbean_img, .almond_img, .egg_img, .ham_img, .springOnion_img{
-    width: 100%;
-}
-.clearfix{
-    clear: both;
-}
+
 /* Buttons */
 .btn_box{
     width: 100%;
@@ -34,21 +29,35 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
-
-
-.cust_title_box{
-    background-image: url('../img/title.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
-    height: 270px;
-}
-.cust_title{
-    text-align: center;
-    padding-top: 145px;
+@media (max-width: 767px){
+  .btn_box {
+    width: 95%;
+    order: 3;
+  }
+  .btn{
+    width: 45%;
+  }
+  .btn_text{
+    font-size: 24px;
+  }
 }
 
+
+/* list and RWD-list */
+.list{
+  display: block;
+}
+.RWD-list{
+  display: none;
+}
+@media (max-width: 767px){
+  .list{
+    display: none;
+  }
+  .RWD-list{
+    display: block;
+  }
+}
 
 /* ----------------------favor---------------------- */
 /* ------------------------------------------------- */
@@ -60,71 +69,102 @@ body{
 }
 
 
-
-@media (max-width: 767px) {
-    .cust_favor_type{
-        width: 100%;
-        background-color: #fcc;
-    }
-    
-    
-}
+/* flex setting---------------------- */
 .cust_favor > .container > .wrap{
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  justify-content: space-between;
+
 }
-/* .cust_favor_list{
-    width: 250px;
-    float: left;
-    margin-top: -60px;
-} */
 .cust_favor_type{
-    width: 78%;
-    margin-top: 20%;
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  /* align-items: center; */
+  /* suggest. */
+  align-items: flex-end;  
 }
+.favor_box{
+  width: 100%;
+}
+
+/* position---------------------- */
 .favor_jp, .favor_west, .favor_china{
-        width: 33.33%;
-        float: left;
-        position: relative;
-    }
-    .favor_box{
-        float: right;   /* 讓基底的籤條靠右切齊 */
-        margin: 20px 0;
-    }
-.pie_img, .favor_style, .favor_title{
-    position: absolute;
+  position: relative;
+  cursor: pointer;
 }
-.pie_img{       /* 派圖片 */
-    top: 170px;
-    right: 30px;
+.pie_img, .favor_style, .favor_title, .mascot{
+  position: absolute;
 }
-.favor_style{   /* 風格文字--西洋風 */
-    font-size: 50px;
-    top: 60px;
-    right: 40px;
+
+/* 派圖片 */
+.pie_img{ 
+  width: 100%;  
+  top: 22%;
+  right: 0%;
 }
-.favor_title{   /* 基底名字--南瓜派 */
+
+/* 風格文字--西洋風 */
+.favor_style{ 
+  font-size: 50px;
+  top: 7%;
+  left: 15%;
+}
+
+/* 基底名字--南瓜派 */
+.favor_title{ 
     font-size: 50px;
     writing-mode: vertical-lr;
-    bottom: 120px;
-    right: 125px;
+    bottom: 17%;
+    left: 22%;
 }
+/* 吉祥物 */
 .mascot{
-    width: 50%;
-    position: absolute;
-    bottom: 0;
-    right: -10%;
-    transform: rotate(10deg);
-    opacity: 0;
-}
-.favor_box, .pie_img, .favor_style, .favor_title, .mascot{
-    cursor: pointer;
+  width: 60%;
+  bottom: 0;
+  right: -10%;
+  transform: rotate(10deg);
+  opacity: 0;
+  transition: .2s;
 }
 
-/* Hover can't work. */
-.favor_box, .pie_img, .favor_style, .favor_title:hover .mascot{
-    opacity: 1;
+/* mascot's hover---------------------- */
+.favor_box:hover ~ .mascot,
+.pie_img:hover ~ .mascot,
+.favor_style:hover ~ .mascot,
+.favor_title:hover ~ .mascot,
+.mascot:hover{
+  opacity: 1;
 }
+
+@media (max-width: 767px) {
+  .favor_jp, .favor_west, .favor_china{
+    outline: #f0c 2px solid;
+  }
+  .cust_favor_type{
+    outline: purple 3px solid;
+  }
+  .cust_favor > .container > .wrap{
+    justify-content: center;
+  }
+  .cust_favor_type{
+    width: 95%;
+    justify-content: center;
+  }
+
+  .favor_jp, .favor_west, .favor_china{
+    display: none;
+  }
+  .show_favor{
+    display: block;
+  }
+  .mascot{
+    opacity: 1;
+  }
+}
+
+
 
 /* First step pumpkin */
 .cust_titleshow_step1{
@@ -156,17 +196,16 @@ body{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    /* -webkit-box-flex: 1;
+    -webkit-box-flex: 1;
         -ms-flex: 1;
-            flex: 1; */
-            flex-wrap: wrap;
+            flex: 1;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
   
   @media (max-width: 767px) {
-    .cust_decor > .container {
+    .container {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
       -webkit-box-pack: center;
@@ -174,97 +213,8 @@ body{
               justify-content: center;
     }
   }
-
-
-.cust_listBox {
-    /* border: 1px solid green; */
-    width: 22%;
-
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    /* background-color: #ccc; */
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
   
-  @media (max-width: 767px) {
-    .cust_listBox {
-      width: 95%;
-      -webkit-box-ordinal-group: 3;
-          -ms-flex-order: 2;
-              order: 2;
-    }
-    .cust_listBox > .list {
-      width: 50%;
-      height: 40%;
-    }
-  }
-
-  .cust_scrollbox {
-      width: 50%;
-    /* border: 1px solid #000; */
-  }
-
-  .cust_titleshow {
-    position: relative;
-    /* border: 1px solid #000; */
-  }
-  
-  .cust_titleshow > img {
-    width: 70%;
-    margin: 0 auto;
-  }
-  
-  .cust_titleshow > h3 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    /* border: 1px solid #000; */
-    -webkit-transform: translate(-50%);
-            transform: translate(-50%);
-  }
-
-
-  .cust_pieshow {
-    position: relative;
-    /* border: 1px solid #000; */
-    /* background-color: #ccc; */
-    padding-bottom: 700px;
-  }
-  
-  .cust_pieshow > .pie {
-    width: 70%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    z-index: 2;
-  }
-  
-  .cust_pieshow > .prople {
-    position: absolute;
-    top: 0;
-    left: 45%;
-    -webkit-transform: rotate(10deg);
-            transform: rotate(10deg);
-  }
-  
-  .cust_pieshow > .wood {
-    width: 100%;
-    position: absolute;
-    top: 70%;
-  }
-
-
   .cust_aside {
-      width: 28%;
     position: relative;
   }
   
@@ -285,7 +235,7 @@ body{
       display: none;
     }
   }
-
+  
   .cust_ingred_box {
     position: absolute;
     width: 80%;
@@ -318,6 +268,93 @@ body{
   
   .cust_ingred_box > .cust_item > img {
     width: 100%;
+  }
+  
+  @media (max-width: 767px){
+    .cust_listBox {
+      outline: rgb(11, 73, 47) 5px solid;
+      /* width: 75%; */
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2;
+      
+    }
+    .cust_favor_type{
+    }
+    .cust_listBox > .list {
+      width: 80%;
+      height: 40%;
+    }
+  }
+  .cust_listBox {
+    outline: rgb(11, 73, 47) 5px solid;
+    width: 22%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #ccc;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  
+  
+  .cust_scrollbox {
+    border: 1px solid #000;
+  }
+  
+  .cust_titleshow {
+    position: relative;
+    border: 1px solid #000;
+  }
+  
+  .cust_titleshow > img {
+    width: 70%;
+    margin: 0 auto;
+  }
+  
+  .cust_titleshow > h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid #000;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+  }
+  
+  .cust_pieshow {
+    position: relative;
+    border: 1px solid #000;
+    background-color: #ccc;
+    padding-bottom: 700px;
+  }
+  
+  .cust_pieshow > .pie {
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    z-index: 2;
+  }
+  
+  .cust_pieshow > .prople {
+    position: absolute;
+    top: 0;
+    left: 45%;
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  
+  .cust_pieshow > .wood {
+    width: 100%;
+    position: absolute;
+    top: 70%;
   }
 
 /* ----------------------------message---------------------------- */
@@ -370,5 +407,11 @@ form{
     width: 100%; /*自动适应父布局宽度*/
 	/* overflow: auto; */
 	/* word-break: inherit; */
+}
+
+@media (max-width: 767px) {
+  .msgContent{
+    height: 95px;
+  }
 }
 
