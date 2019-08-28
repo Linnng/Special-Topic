@@ -5,10 +5,11 @@ body{
     background-position: center;
 }
 
-/* Buttons */
+/* Buttons-------------------------------------------------- */
 .btn_box{
     width: 100%;
     text-align: center;
+    outline: #f0c 2px solid;
 }
 .btn{
     display: inline-block;
@@ -17,6 +18,8 @@ body{
     cursor: pointer;
     position: relative;
   text-align: center;
+  outline: rgb(123, 63, 201) 2px solid;
+
 }
 .btn > img{
     width: 100%;
@@ -42,6 +45,53 @@ body{
   }
 }
 
+/* 最左邊 list跟價錢 的設定------------------------------ */
+
+  /* list 電腦版*/
+  .cust_listBox {
+    outline: rgb(85, 246, 179) 5px solid;
+    width: 22%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  @media (max-width: 767px) {
+    .container {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  
+  
+  /* List RWD */
+  @media (max-width: 767px){
+    .wrap > .cust_listBox {
+      width: 95%;
+      outline: rgb(206, 98, 27) 3px solid;
+     order: 5;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    }
+    .RWD-list_box{
+      /* flex: 4; */
+      width: 75%;
+      outline: #f0c 3px solid;
+    }
+    .RWD-list_box > img{
+      width: 100%;
+    }
+    .price_box{
+      width: 25%;
+      /* flex: 1; */
+      outline: rgb(140, 0, 255) 3px solid;
+    }
+    .price_box > img{
+      width: 100%;
+    }
+  }
+  /* List RWD */
 
 /* list and RWD-list */
 .list{
@@ -82,7 +132,6 @@ body{
   justify-content: space-between;
   width: 70%;
   /* align-items: center; */
-  /* suggest. */
   align-items: flex-end;  
 }
 .favor_box{
@@ -129,7 +178,7 @@ body{
   transition: .2s;
 }
 
-/* mascot's hover---------------------- */
+/* 吉祥物 hover---------------------- */
 .favor_box:hover ~ .mascot,
 .pie_img:hover ~ .mascot,
 .favor_style:hover ~ .mascot,
@@ -166,7 +215,7 @@ body{
 
 
 
-/* First step pumpkin */
+/* 第一步 南瓜雲 */
 .cust_titleshow_step1{
     position: absolute;
     width: 50%;
@@ -187,125 +236,7 @@ body{
   }
 
 
-
-
-/* -------------------------decoration------------------------- */
-/* ------------------------------------------------------------ */
-
-.cust_decor > .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  
-  @media (max-width: 767px) {
-    .container {
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-    }
-  }
-  
-  .cust_aside {
-    position: relative;
-  }
-  
-  @media (max-width: 767px) {
-    .cust_aside {
-      width: 95%;
-      border: 1px solid #000;
-    }
-  }
-  
-  .cust_aside > img {
-    width: 100%;
-    height: 100%;
-  }
-  
-  @media (max-width: 767px) {
-    .cust_aside > img {
-      display: none;
-    }
-  }
-  
-  .cust_ingred_box {
-    position: absolute;
-    width: 80%;
-    top: 30%;
-    left: 50%;
-    -webkit-transform: translate(-50%);
-            transform: translate(-50%);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  
-  @media (max-width: 767px) {
-    .cust_ingred_box {
-      -ms-flex-wrap: nowrap;
-          flex-wrap: nowrap;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
-      border: 1px solid #000;
-    }
-  }
-  
-  .cust_ingred_box > .cust_item {
-    width: 50%;
-    padding: 10px;
-  }
-  
-  .cust_ingred_box > .cust_item > img {
-    width: 100%;
-  }
-  
-  @media (max-width: 767px){
-    .cust_listBox {
-      outline: rgb(11, 73, 47) 5px solid;
-      /* width: 75%; */
-      -webkit-box-ordinal-group: 3;
-          -ms-flex-order: 2;
-              order: 2;
-      
-    }
-    .cust_favor_type{
-    }
-    .cust_listBox > .list {
-      width: 80%;
-      height: 40%;
-    }
-  }
-  .cust_listBox {
-    outline: rgb(11, 73, 47) 5px solid;
-    width: 22%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    background-color: #ccc;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  
-  
-  .cust_scrollbox {
-    border: 1px solid #000;
-  }
+/* 第二三步 南瓜雲 */
   
   .cust_titleshow {
     position: relative;
@@ -326,37 +257,174 @@ body{
             transform: translate(-50%);
   }
   
+
+
+/* -------------------------配票 & 裝飾------------------------- */
+/* ------------------------------------------------------------ */
+@media (max-width: 767px){
+  .cust_decor > .container > .wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.cust_decor > .container > .wrap {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+  }
+  /* 中間----------------------------------------------- */
+.cust_scrollbox {
+    width: 50%;
+    border: 5px solid rgb(214, 17, 198);
+  }
+
+  @media (max-width: 767px){
+    .cust_scrollbox {
+    width: 95%;
+    }
+  }
+
+  /* ps. cust_titleshow 南瓜雲 在上面 */
+
+  /* 派 桌子 吉祥物 position */
   .cust_pieshow {
     position: relative;
-    border: 1px solid #000;
+    border: 5px solid rgb(67, 70, 228);
     background-color: #ccc;
     padding-bottom: 700px;
   }
-  
+  @media (max-width: 767px){
+    .cust_pieshow {
+      padding-bottom: 550px;
+    }
+  }  
   .cust_pieshow > .pie {
     width: 70%;
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    transform: translateX(-50%);
     z-index: 2;
   }
-  
+  @media (max-width: 767px){
+    .cust_pieshow > .pie{
+      top: 53%;
+    }
+  }  
   .cust_pieshow > .prople {
     position: absolute;
     top: 0;
     left: 45%;
-    -webkit-transform: rotate(10deg);
-            transform: rotate(10deg);
+    transform: rotate(10deg);
   }
-  
+  @media (max-width: 767px){
+    .cust_pieshow > .prople {
+      width: 40%;
+    }
+  }  
   .cust_pieshow > .wood {
-    width: 100%;
+    width: 80%;
     position: absolute;
-    top: 70%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
+
+
+  /* 右邊----------------------------------------------- */
+  /* 材料背景設定 */
+  .cust_aside {
+    width: 28%;
+    position: relative;
+  }
+  
+  @media (max-width: 767px) {
+    .cust_aside {
+      width: 95%;
+    }
+  }
+  
+  .cust_aside > img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  @media (max-width: 767px) {
+    .cust_aside > img {
+      display: none;
+    }
+  }
+  
+/* 材料內容物 */
+
+  .cust_ingred_box {
+    position: absolute;
+    width: 80%;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  
+  @media (max-width: 767px) {
+    .cust_ingred_box {
+      
+    outline: rgb(25, 105, 22) 5px solid;
+    
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* transform: translate(-50%); */
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    }
+  }
+  
+  .cust_ingred_box > .cust_item {
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    cursor: pointer;
+  }
+  @media (max-width: 767px) {
+    .cust_ingred_box > .cust_item {
+      background-color: #fcc;
+      border-radius: 10px;
+      width: 16%;
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+    }
+  }  
+
+  .cust_ingred_box > .cust_item > img {
+    line-height: 100%;
+    margin: auto;
+    width: 100%;
+  }
+  .cust_ingred_box > .cust_item > span{
+    outline: greenyellow 1px solid;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+  }
+  @media (max-width: 767px) {
+    .cust_ingred_box > .cust_item > span{
+      font-size: 16px;
+    }
+  }
+  
+  
+  
 /* ----------------------------message---------------------------- */
 /* --------------------------------------------------------------- */
 .card_message{
