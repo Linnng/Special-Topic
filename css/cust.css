@@ -32,6 +32,8 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+
 @media (max-width: 767px){
   .btn_box {
     width: 95%;
@@ -47,6 +49,13 @@ body{
 
 /* 最左邊 list跟價錢 的設定------------------------------ */
 
+  @media (max-width: 767px) {
+    .container {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  
   /* list 電腦版*/
   .cust_listBox {
     outline: rgb(85, 246, 179) 5px solid;
@@ -57,12 +66,6 @@ body{
     justify-content: space-around;
   }
 
-  @media (max-width: 767px) {
-    .container {
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-  }
   
   
   /* List RWD */

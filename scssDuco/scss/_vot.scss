@@ -1,0 +1,86 @@
+body {
+  background-image: url('../img/same_bg.png');
+  background-repeat: repeat-y;
+}
+
+.vot_main {
+  > .container {
+    @at-root .vot_titleshow {
+
+      background-image: url('../img/title.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+      border: 1px solid #000;
+      
+      @include flex-cen-cen;
+      height: 270px;
+      .vot_title {
+        padding-top: 60px;
+      }
+    }
+    > .vot_group {
+      display: flex;
+      justify-content: space-between;
+      @at-root .vot {
+        &_card {
+          // background-color: #888;
+          width: 33%;
+          height: 300px;
+          background-image: url('../img/card-bgc.png');
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 90%;
+          display: flex;
+          align-items: flex-end;
+          position: relative;
+          // border: 1px solid #000;
+        }
+        &_imgarea {
+          // border: 1px solid #000;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 30px;
+          > .img_title {
+            color: map-get($color, title_color);
+            padding-top: 20px;
+            padding-bottom: 10px;
+          }
+          > img {
+            // border: 1px solid #000;
+            padding-left: 30px;
+            // padding-right: 30px;
+          }
+        }
+        &_txt {
+          // border: 1px solid #000;
+          padding: 15px;
+          padding-left: 5px;
+          margin-bottom: 30px;
+          > .btn {
+            @include btnCase(100px, 30px);
+            margin-top: 30px;
+            border: 1px solid #000;
+          }
+        }
+        &_show {
+          width: 80px;
+          height: 130px;
+          // border: 1px solid #000;
+          position: absolute;
+          right: 5%;
+          top: 0%;
+          background-image: url('../img/water.png');
+          background-size: 100%;
+          .show_num {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translateX(-50%) rotate(20deg);
+          }
+        }
+      }
+    }
+  }
+}
