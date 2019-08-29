@@ -26,10 +26,9 @@
                 @at-root .cust_pieshow{
                     position: relative;
                     border: 5px solid rgb(67, 70, 228);
-                    background-color: #ccc;
                     padding-bottom: 700px;
                     @include media(md){
-                        padding-bottom: 550px;
+                        padding-bottom: 730px;
                     }
 
                     > .pie{
@@ -40,7 +39,7 @@
                         transform: translateX(-50%);
                         z-index: 2;
                         @include media(md){
-                            top: 53%;
+                            top: 50%;
                         }
                     }
                     > .prople{

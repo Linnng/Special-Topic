@@ -65,6 +65,7 @@ body{
     width: 22%;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
 
@@ -72,8 +73,10 @@ body{
         outline: rgb(206, 98, 27) 3px solid;
         width: 95%;
         order: 5;
-        justify-content: space-between;
+        display: flex;
+        flex-direction: row;
         flex-wrap: nowrap;
+        justify-content: space-between;
     }
 
     @at-root .list_box{

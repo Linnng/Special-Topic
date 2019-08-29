@@ -261,6 +261,10 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -275,11 +279,18 @@ body {
     -webkit-box-ordinal-group: 6;
         -ms-flex-order: 5;
             order: 5;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
   }
 }
 
@@ -494,13 +505,12 @@ body {
 .cust_pieshow {
   position: relative;
   border: 5px solid #4346e4;
-  background-color: #ccc;
   padding-bottom: 700px;
 }
 
 @media (max-width: 767px) {
   .cust_pieshow {
-    padding-bottom: 550px;
+    padding-bottom: 730px;
   }
 }
 
@@ -516,7 +526,7 @@ body {
 
 @media (max-width: 767px) {
   .cust_pieshow > .pie {
-    top: 53%;
+    top: 50%;
   }
 }
 
