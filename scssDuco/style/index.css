@@ -367,42 +367,24 @@ body {
   }
 }
 
+.cust_favor > .container .wrap .cust_favor_type:nth-child(1),
+.cust_favor > .container .wrap .cust_favor_type :nth-child(2),
+.cust_favor > .container .wrap .cust_favor_type :nth-child(3) {
+  position: relative;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .cust_favor > .container .wrap .cust_favor_type:nth-child(1),
+  .cust_favor > .container .wrap .cust_favor_type :nth-child(2),
+  .cust_favor > .container .wrap .cust_favor_type :nth-child(3) {
+    display: none;
+  }
+}
+
 @media (max-width: 767px) {
   .show_favor {
     display: block;
-  }
-}
-
-.favor_jp {
-  position: relative;
-  cursor: pointer;
-}
-
-@media (max-width: 767px) {
-  .favor_jp {
-    display: none;
-  }
-}
-
-.favor_west {
-  position: relative;
-  cursor: pointer;
-}
-
-@media (max-width: 767px) {
-  .favor_west {
-    display: none;
-  }
-}
-
-.favor_china {
-  position: relative;
-  cursor: pointer;
-}
-
-@media (max-width: 767px) {
-  .favor_china {
-    display: none;
   }
 }
 

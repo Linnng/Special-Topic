@@ -25,32 +25,19 @@
                     justify-content: center;
                 }
 
+                &:nth-child(1),
+                :nth-child(2),
+                :nth-child(3){
+                    position: relative;
+                    cursor: pointer;
+                    @include media(md){
+                        display: none;
+                    }
+                }
 
-                // don't know...
                 @at-root .show_favor{
                     @include media(md){
                         display: block;
-                    }
-                }
-                @at-root .favor_jp{
-                    position: relative;
-                    cursor: pointer;
-                    @include media(md){
-                        display: none;
-                    }
-                }
-                @at-root .favor_west{
-                    position: relative;
-                    cursor: pointer;
-                    @include media(md){
-                        display: none;
-                    }
-                }
-                @at-root .favor_china{
-                    position: relative;
-                    cursor: pointer;
-                    @include media(md){
-                        display: none;
                     }
                 }
                 @at-root .favor_box{
