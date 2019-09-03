@@ -1,0 +1,108 @@
+body{
+	background-image: url('../img/same_bg.png');
+    background-repeat: repeat-y;
+    background-position: center;
+}
+
+// buttons....
+.btn_box{
+    width: 100%;
+    text-align: center;
+    outline: #f0c 2px solid;
+    @include media(md){
+        width: 95%;
+        order: 3;
+    }
+
+    @at-root .btn{
+        display: inline-block;
+        width: 25%;
+        margin: auto;
+        cursor: pointer;
+        position: relative;
+        text-align: center;
+        outline: rgb(123, 63, 201) 2px solid;
+        @include media(md){
+            width: 45%;
+        }
+
+        > img{
+            width: 100%;
+        }
+        @at-root.btn_text{
+            font-size: 30px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            @include media(md){
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+// 南瓜雲....
+.cust_titleshow{
+    border: 1px solid #000;
+    position: relative;
+    > img{
+        width: 70%;
+        margin: 0 auto;
+    }
+    > h3{
+        border: 1px solid #000;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+}
+
+// 最左邊的區塊 -- list &價錢
+.cust_listBox{
+    outline: rgb(85, 246, 179) 5px solid;
+    width: 22%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    @include media(md){
+        outline: rgb(206, 98, 27) 3px solid;
+        width: 95%;
+        order: 5;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    @at-root .list_box{
+        display: block;
+        @include media(md){
+            display: none;
+        }
+    }
+    @at-root .RWD-list_box{
+        display: none;
+        @include media(md){
+            outline: #f0c 3px solid;
+            width: 75%;
+            display: block;
+            > img{
+                width: 100%;
+            }
+        }
+    }
+    @at-root .price_box{
+        @include media(md){
+            outline: rgb(140, 0, 255) 3px solid;
+            width: 25%;
+            >img{
+                width: 100%;
+            }
+        }
+    }
+}

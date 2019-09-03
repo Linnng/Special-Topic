@@ -1,0 +1,144 @@
+.cust_decor{
+    > .container{
+        .wrap{
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            @include media(md){
+                display: flex;
+                flex-wrap:wrap;
+                justify-content: center;
+            }
+
+            // 左邊 -- 清單&價錢 在_custShared.scss---------
+
+            // 中間 -- 主要派區 via. 南瓜雲-----------------
+            @at-root .cust_scrollbox{
+                width: 50%;
+                border: 5px solid rgb(214, 17, 198);
+                @include media(md){
+                    width: 95%;
+                }
+
+                // 南瓜雲 在_custShared.scss
+
+                // 派 桌子 吉祥物 position
+                @at-root .cust_pieshow{
+                    position: relative;
+                    border: 5px solid rgb(67, 70, 228);
+                    padding-bottom: 700px;
+                    @include media(md){
+                        padding-bottom: 730px;
+                    }
+
+                    > .pie{
+                        width: 70%;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        z-index: 2;
+                        @include media(md){
+                            top: 50%;
+                        }
+                    }
+                    > .prople{
+                        position: absolute;
+                        top: 0;
+                        left: 45%;
+                        transform: rotate(10deg);
+                        @include media(md){
+                            width: 40%;
+                        }
+                    }
+                    > .wood{
+                        width: 80%;
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+
+                    
+                    
+                }
+            }
+
+            // 右邊 -- 食材選擇----------------------------
+            @at-root .cust_aside{
+                width: 28%;
+                position: relative;
+                @include media(md){
+                    width: 95%;
+                }
+
+
+                // 食材background
+                > img{
+                    width: 100%;
+                    height: 100%;
+                    @include media(md){
+                        display: none;
+                    }
+                }
+
+                // 食材內容物 外框
+                @at-root .cust_ingred_box{
+                    position: absolute;
+                    width: 80%;
+                    top: 30%;
+                    left: 50%;
+                    transform: translate(-50%);
+                    display: flex;
+                    flex-wrap: wrap;
+                    @include media(md){
+                        outline: rgb(25, 105, 22) 5px solid;
+    
+                        width: 100%;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        /* transform: translate(-50%); */
+                        flex-wrap: nowrap;
+                        justify-content: space-between;
+                    }
+
+                    > .cust_item{
+                        width: 50%;
+                        padding: 10px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: flex-end;
+                        cursor: pointer;
+                        @include media(md){
+                            background-color: #fcc;
+                            border-radius: 10px;
+                            width: 16%;
+                            padding: 10px;
+                            display: flex;
+                            flex-wrap: wrap;
+                            align-items: flex-end;
+                        }
+
+                        > img{
+                            line-height: 100%;
+                            margin: auto;
+                            width: 100%;
+                        }
+                        > span{
+                            outline: greenyellow 1px solid;
+                            display: block;
+                            width: 100%;
+                            text-align: center;
+                            font-size: 20px;
+                            @include media(md){
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
